@@ -64,9 +64,6 @@
 		<script src="build/three.js"></script>
 		<script src="js/loaders/OBJLoader.js"></script>
 		<script src="js/controls/TrackballControls.js"></script>
-		<!--<script src="file:///storage/emulated/0/JiQiRen/build/three.js"></script>-->
-		<!--<script src="file:///storage/emulated/0/JiQiRen/js/loaders/OBJLoader.js"></script>-->
-		<!--<script src="file:///storage/emulated/0/JiQiRen/js/controls/TrackballControls.js"></script>-->
 
 
 		<script>
@@ -85,6 +82,7 @@
 			var mesh1, mesh2, mesh3, mesh4, mesh5, mesh6, mesh7;//模型1-7
 			var gj1, gj2, gj3, gj4, gj5, gj6;//关节1-6
 			var jd1, jd2, jd3, jd4, jd5, jd6;
+            var sjd1, sjd2, sjd3, sjd4, sjd5, sjd6;
             var isRotation = false;
             var loader;//加载器
 			init();
@@ -108,7 +106,12 @@
 //                controls.dynamicDampingFactor = 0.3;
 
 				// scene
-
+                jd1 = 0;
+                jd2 = 0;
+                jd3 = 0;
+                jd4 = 0;
+                jd5 = 0;
+                jd6 = 0;
 				scene = new THREE.Scene();
 
 				var ambient = new THREE.AmbientLight( 0x101030 );
@@ -151,6 +154,7 @@
                             mesh1 = child;
                             scene.add( mesh1 );
                             load_num++;
+                            console.log("!!!",mesh1);
                         }
                     } );
                 });
@@ -341,6 +345,12 @@
 
 			//
             function JQRRotation(){
+                sjd1 = jd1;
+                sjd2 = jd2;
+                sjd3 = jd3;
+                sjd4 = jd4;
+                sjd5 = jd5;
+                sjd6 = jd6;
 				jd1 = document.frm.jd1.value;
                 jd2 = document.frm.jd2.value;
                 jd3 = document.frm.jd3.value;
@@ -360,36 +370,38 @@
                     load_num++;
 				}
 				if(isRotation){		//允许旋转
-                    if(jd1>=0 && jd1*Math.PI/180 > mesh7.rotation.y){
+                    if(jd1 - sjd1 >=0  && jd1*Math.PI/180 > mesh7.rotation.y){
                         mesh7.rotation.set(0,mesh7.rotation.y+0.02,0);
-					}else if(jd1<0 && jd1*Math.PI/180 < mesh7.rotation.y){
+					}else if(jd1 - sjd1 <0 && jd1*Math.PI/180 < mesh7.rotation.y){
                         mesh7.rotation.set(0,mesh7.rotation.y-0.02,0);
 					}
-                    if(jd2>=0 && jd2*Math.PI/180 > gj1.rotation.x){
+                    if(jd2 - sjd2 >=0  && jd2*Math.PI/180 > gj1.rotation.x){
                         gj1.rotation.set(gj1.rotation.x+0.02,0,0);
-                    }else if(jd2<0 && jd2*Math.PI/180 < gj1.rotation.x){
+                    }else if(jd2 - sjd2 <0 && jd2*Math.PI/180 < gj1.rotation.x){
                         gj1.rotation.set(gj1.rotation.x-0.02,0,0);
                     }
-                    if(jd3>=0 && jd3*Math.PI/180 > gj2.rotation.z){
+                    if(jd3 - sjd3 >=0  && jd3*Math.PI/180 > gj2.rotation.z){
                         gj2.rotation.set(0,0,gj2.rotation.z+0.02);
-                    }else if(jd3<0 && jd3*Math.PI/180 < gj2.rotation.z){
+                    }else if(jd3 - sjd3 <0 && jd3*Math.PI/180 < gj2.rotation.z){
                         gj2.rotation.set(0,0,gj2.rotation.z-0.02);
                     }
-                    if(jd4>=0 && jd4*Math.PI/180 > gj3.rotation.x){
+                    if(jd4 - sjd4 >=0  && jd4*Math.PI/180 > gj3.rotation.x){
                         gj3.rotation.set(gj3.rotation.x+0.02,0,0);
-                    }else if(jd4<0 && jd4*Math.PI/180 < gj3.rotation.x){
+                    }else if(jd4 - sjd4 <0 && jd4*Math.PI/180 < gj3.rotation.x){
                         gj3.rotation.set(gj3.rotation.x-0.02,0,0);
                     }
-                    if(jd5>=0 && jd5*Math.PI/180 > gj4.rotation.x){
+                    if(jd5 - sjd5 >=0  && jd5*Math.PI/180 > gj4.rotation.x){
                         gj4.rotation.set(gj4.rotation.x+0.02,0,0);
-                    }else if(jd5<0 && jd5*Math.PI/180 < gj4.rotation.x){
+                    }else if(jd5 - sjd5 <0 && jd5*Math.PI/180 < gj4.rotation.x){
                         gj4.rotation.set(gj4.rotation.x-0.02,0,0);
                     }
-                    if(jd6>=0 && jd6*Math.PI/180 > gj5.rotation.y){
+
+                    if(jd6 - sjd6 >=0 && jd6*Math.PI/180 > gj5.rotation.y){
                         gj5.rotation.set(0,gj5.rotation.y+0.02,0);
-                    }else if(jd6<0 && jd6*Math.PI/180 < gj5.rotation.y){
-                        gj5.rotation.set(0,gj5.rotation.y-0.02,0);
                     }
+                    else if(jd6 - sjd6 <0 && jd6*Math.PI/180 < gj5.rotation.y){
+                        gj5.rotation.set(0,gj5.rotation.y-0.02,0);
+					}
 				}
 			}
 

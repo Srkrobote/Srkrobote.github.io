@@ -1,5 +1,4 @@
-@@ -1,453 +0,0 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>three.js webgl - loaders - OBJ loader</title>
@@ -38,26 +37,26 @@
 		</div>
 		<div id="shuru">
 			<form  name="frm">
-				¹Ø½ÚÒ»½Ç¶È:<br>
+				å…³èŠ‚ä¸€è§’åº¦:<br>
 				<input type="text" name="jd1" value="0">
 				<br>
-				¹Ø½Ú¶þ½Ç¶È:<br>
+				å…³èŠ‚äºŒè§’åº¦:<br>
 				<input type="text" name="jd2" value="0">
 				<br>
-				¹Ø½ÚÈý½Ç¶È:<br>
+				å…³èŠ‚ä¸‰è§’åº¦:<br>
 				<input type="text" name="jd3" value="0">
 				<br>
-				¹Ø½ÚËÄ½Ç¶È:<br>
+				å…³èŠ‚å››è§’åº¦:<br>
 				<input type="text" name="jd4" value="0">
 				<br>
-				¹Ø½ÚÎå½Ç¶È:<br>
+				å…³èŠ‚äº”è§’åº¦:<br>
 				<input type="text" name="jd5" value="0">
 				<br>
-				¹Ø½ÚÁù½Ç¶È:<br>
+				å…³èŠ‚å…­è§’åº¦:<br>
 				<input type="text" name="jd6" value="0">
 				<br><br>
-				<input type="button" value="·ÂÕæ" onclick="JQRRotation()">
-				<input type="button" value="¸´Î»" onclick="ReSet()">
+				<input type="button" value="ä»¿çœŸ" onclick="JQRRotation()">
+				<input type="button" value="å¤ä½" onclick="ReSet()">
 			</form>
 		</div>
 
@@ -75,17 +74,17 @@
 
 			var mouseX = 0, mouseY = 0;
 
-			var load_num = 0;//¼ÓÔØ¸öÊý
+			var load_num = 0;//åŠ è½½ä¸ªæ•°
 
 			var windowHalfX = window.innerWidth / 2;
 			var windowHalfY = window.innerHeight / 2;
-			var controls;	//¿ØÖÆÆ÷
-			var mesh1, mesh2, mesh3, mesh4, mesh5, mesh6, mesh7;//Ä£ÐÍ1-7
-			var gj1, gj2, gj3, gj4, gj5, gj6;//¹Ø½Ú1-6
+			var controls;	//æŽ§åˆ¶å™¨
+			var mesh1, mesh2, mesh3, mesh4, mesh5, mesh6, mesh7;//æ¨¡åž‹1-7
+			var gj1, gj2, gj3, gj4, gj5, gj6;//å…³èŠ‚1-6
 			var jd1, jd2, jd3, jd4, jd5, jd6;
             var sjd1, sjd2, sjd3, sjd4, sjd5, sjd6;
             var isRotation = false;
-            var loader;//¼ÓÔØÆ÷
+            var loader;//åŠ è½½å™¨
 			init();
 			animate();
 
@@ -124,8 +123,8 @@
 
 
 				// model
-				loader = new THREE.OBJLoader();	//Ä£ÐÍ¼ÓÔØÆ÷
-                initObj();						//¼ÓÔØÄ£ÐÍ·½·¨
+				loader = new THREE.OBJLoader();	//æ¨¡åž‹åŠ è½½å™¨
+                initObj();						//åŠ è½½æ¨¡åž‹æ–¹æ³•
 
 
 				//
@@ -142,7 +141,7 @@
 
 			}
 
-            //¼ÓÔØÄ£ÐÍ
+            //åŠ è½½æ¨¡åž‹
 			function initObj(){
                 loader.load( 'obj/mesh1.obj', function ( object ) {
                     object.traverse( function ( child ) {
@@ -247,9 +246,9 @@
                 });
 			}
 
-            function initGuanJie(){		//´ÓÉÏµ½ÏÂ°ó¶¨¹Ø½Ú
+            function initGuanJie(){		//ä»Žä¸Šåˆ°ä¸‹ç»‘å®šå…³èŠ‚
 
-                //¹Ø½ÚÒ»
+                //å…³èŠ‚ä¸€
 				gj1 = new THREE.Group();
 				gj1.add(mesh7);
                 gj1.add(mesh6);
@@ -265,7 +264,7 @@
                 mesh7.position.y -= gj1.position.y;
                 mesh7.position.z -= gj1.position.z;
 
-				//¹Ø½Ú¶þ
+				//å…³èŠ‚äºŒ
               	gj2 = new THREE.Group();
                 gj2.add(gj1);
                 gj2.add(mesh5);
@@ -281,7 +280,7 @@
                 gj1.position.y -= gj2.position.y;
                 gj1.position.z -= gj2.position.z;
 
-                //¹Ø½ÚÈý
+                //å…³èŠ‚ä¸‰
                 gj3 = new THREE.Group();
                 gj3.add(gj2);
                 gj3.add(mesh4);
@@ -297,7 +296,7 @@
                 gj2.position.y -= gj3.position.y;
                 gj2.position.z -= gj3.position.z;
 
-                //¹Ø½ÚËÄ
+                //å…³èŠ‚å››
                 gj4 = new THREE.Group();
                 gj4.add(gj3);
                 gj4.add(mesh3);
@@ -313,7 +312,7 @@
                 gj3.position.y -= gj4.position.y;
                 gj3.position.z -= gj4.position.z;
 
-                //¹Ø½ÚÎå
+                //å…³èŠ‚äº”
                 gj5 = new THREE.Group();
                 gj5.add(gj4);
                 gj5.add(mesh2);
@@ -366,11 +365,11 @@
 				requestAnimationFrame( animate );
 				render();
                 controls.update();
-                if(load_num == 7){	//Ä£ÐÍ¼ÓÔØÍê³Éºó°ó¶¨¹Ø½Ú
+                if(load_num == 7){	//æ¨¡åž‹åŠ è½½å®ŒæˆåŽç»‘å®šå…³èŠ‚
                     initGuanJie();
                     load_num++;
 				}
-				if(isRotation){		//ÔÊÐíÐý×ª
+				if(isRotation){		//å…è®¸æ—‹è½¬
                     if(jd1 - sjd1 >=0  && jd1*Math.PI/180 > mesh7.rotation.y){
                         mesh7.rotation.set(0,mesh7.rotation.y+0.02,0);
 					}else if(jd1 - sjd1 <0 && jd1*Math.PI/180 < mesh7.rotation.y){
@@ -414,7 +413,7 @@
 				renderer.render( scene, camera );
 
 			}
-			function ReSet() {		//¸´Î»Âß¼­
+			function ReSet() {		//å¤ä½é€»è¾‘
                 if(jd1>0){			//
                     jd1 = -0.01;
                 }else{

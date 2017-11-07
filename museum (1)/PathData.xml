@@ -1,0 +1,1282 @@
+<?xmlversion="1.0"encoding="UTF-8"?>
+<root>
+    <ting id="1">
+        <picture id="1">
+            <name>摄影厅第一组图1</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p001.jpg</path>
+        </picture>
+		        <picture id="2">
+            <name>摄影厅第一组图2</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p002.jpg</path>
+        </picture>
+		        <picture id="3">
+            <name>摄影厅第一组图3</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p003.jpg</path>
+        </picture>
+		        <picture id="4">
+            <name>摄影厅第一组图4</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p004.jpg</path>
+        </picture>
+		        <picture id="5">
+            <name>摄影厅第一组图5</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p005.jpg</path>
+        </picture>
+		        <picture id="6">
+            <name>摄影厅第一组图6</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p006.jpg</path>
+        </picture>
+		        <picture id="7">
+            <name>摄影厅第一组图7</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p007.jpg</path>
+        </picture>
+		        <picture id="8">
+            <name>摄影厅第一组图8</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p008.jpg</path>
+        </picture>
+		        <picture id="9">
+            <name>摄影厅第一组图9</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p009.jpg</path>
+        </picture>
+		        <picture id="10">
+            <name>摄影厅第一组图10</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p010.jpg</path>
+        </picture>
+		        <picture id="11">
+            <name>摄影厅第一组图11</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p011.jpg</path>
+        </picture>
+		        <picture id="12">
+            <name>摄影厅第一组图12</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p012.jpg</path>
+        </picture>
+		        <picture id="13">
+            <name>摄影厅第一组图13</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p013.jpg</path>
+        </picture>
+		        <picture id="14">
+            <name>摄影厅第一组图14</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p014.jpg</path>
+        </picture>
+		        <picture id="15">
+            <name>摄影厅第一组图15</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p015.jpg</path>
+        </picture>
+		        <picture id="16">
+            <name>摄影厅第一组图16</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p016.jpg</path>
+        </picture>
+		        <picture id="17">
+            <name>摄影厅第一组图17</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p017.jpg</path>
+        </picture>
+		        <picture id="18">
+            <name>摄影厅第一组图18</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p018.jpg</path>
+        </picture>
+		        <picture id="19">
+            <name>摄影厅第一组图19</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p019.jpg</path>
+        </picture>
+		        <picture id="20">
+            <name>摄影厅第一组图20</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p020.jpg</path>
+        </picture>
+		        <picture id="21">
+            <name>摄影厅第一组图21</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p021.jpg</path>
+        </picture>
+		        <picture id="22">
+            <name>摄影厅第一组图22</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p022.jpg</path>
+        </picture>
+		        <picture id="23">
+            <name>摄影厅第一组图23</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p023.jpg</path>
+        </picture>
+		        <picture id="24">
+            <name>摄影厅第一组图24</name>
+            <path>../zhaopian/sheyingting/group1/syg_dwjs_p024.jpg</path>
+        </picture>
+		
+		 <picture id="25">
+            <name>摄影厅第二组图1</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p001.jpg</path>
+        </picture>
+				 <picture id="26">
+            <name>摄影厅第二组图2</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p002.jpg</path>
+        </picture>
+		<picture id="27">
+            <name>摄影厅第二组图3</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p003.jpg</path>
+        </picture>
+		<picture id="28">
+            <name>摄影厅第二组图4</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p004.jpg</path>
+        </picture>
+		<picture id="29">
+            <name>摄影厅第二组图5</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p005.jpg</path>
+        </picture>
+		<picture id="30">
+            <name>摄影厅第二组图6</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p006.jpg</path>
+        </picture>
+		<picture id="31">
+            <name>摄影厅第二组图7</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p007.jpg</path>
+        </picture>
+		<picture id="32">
+            <name>摄影厅第二组图8</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p008.jpg</path>
+        </picture>
+		<picture id="33">
+            <name>摄影厅第二组图9</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p009.jpg</path>
+        </picture>
+		<picture id="34">
+            <name>摄影厅第二组图10</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p010.jpg</path>
+        </picture>
+		<picture id="35">
+            <name>摄影厅第二组图11</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p011.jpg</path>
+        </picture>
+		<picture id="36">
+            <name>摄影厅第二组图12</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p012.jpg</path>
+        </picture>
+		<picture id="37">
+            <name>摄影厅第二组图13</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p013.jpg</path>
+        </picture>
+		<picture id="38">
+            <name>摄影厅第二组图14</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p014.jpg</path>
+        </picture>
+		<picture id="39">
+            <name>摄影厅第二组图15</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p015.jpg</path>
+        </picture>
+		<picture id="40">
+            <name>摄影厅第二组图16</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p016.jpg</path>
+        </picture>
+		<picture id="41">
+            <name>摄影厅第二组图17</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p017.jpg</path>
+        </picture>
+		<picture id="42">
+            <name>摄影厅第二组图18</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p018.jpg</path>
+        </picture>				 
+		<picture id="43">
+            <name>摄影厅第二组图19</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p019.jpg</path>
+        </picture>
+		<picture id="44">
+            <name>摄影厅第二组图20</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p020.jpg</path>
+        </picture>				 
+		<picture id="45">
+            <name>摄影厅第二组图21</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p021.jpg</path>
+        </picture>
+		<picture id="46">
+            <name>摄影厅第二组图22</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p022.jpg</path>
+        </picture>
+		<picture id="47">
+            <name>摄影厅第二组图23</name>
+            <path>../zhaopian/sheyingting/group2/syg_ldgh_p023.jpg</path>
+        </picture>
+
+        <picture id="48">
+            <name>摄影厅第三组图1</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p001.jpg</path>
+        </picture>
+        <picture id="49">
+            <name>摄影厅第三组图2</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p002.jpg</path>
+        </picture>
+        <picture id="50">
+            <name>摄影厅第三组图3</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p003.jpg</path>
+        </picture>
+        <picture id="51">
+            <name>摄影厅第三组图4</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p004.jpg</path>
+        </picture>
+        <picture id="52">
+            <name>摄影厅第三组图5</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p005.jpg</path>
+        </picture>
+        <picture id="53">
+            <name>摄影厅第三组图6</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p006.jpg</path>
+        </picture>
+        <picture id="54">
+            <name>摄影厅第三组图7</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p007.jpg</path>
+        </picture>
+        <picture id="55">
+            <name>摄影厅第三组图8</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p008.jpg</path>
+        </picture>
+        <picture id="56">
+            <name>摄影厅第三组图9</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p009.jpg</path>
+        </picture>
+        <picture id="57">
+            <name>摄影厅第三组图10</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p010.jpg</path>
+        </picture>
+        <picture id="58">
+            <name>摄影厅第三组图11</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p011.jpg</path>
+        </picture>
+        <picture id="59">
+            <name>摄影厅第三组图12</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p012.jpg</path>
+        </picture>
+        <picture id="60">
+            <name>摄影厅第三组图13</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p013.jpg</path>
+        </picture>
+        <picture id="61">
+            <name>摄影厅第三组图14</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p014.jpg</path>
+        </picture>
+        <picture id="62">
+            <name>摄影厅第三组图15</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p015.jpg</path>
+        </picture>
+        <picture id="63">
+            <name>摄影厅第三组图16</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p016.jpg</path>
+        </picture>
+        <picture id="64">
+            <name>摄影厅第三组图17</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p017.jpg</path>
+        </picture>
+        <picture id="65">
+            <name>摄影厅第三组图18</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p018.jpg</path>
+        </picture>
+        <picture id="66">
+            <name>摄影厅第三组图19</name>
+            <path>../zhaopian/sheyingting/group3/syg_qxjy_p019.jpg</path>
+        </picture>
+
+        <picture id="67">
+            <name>摄影厅第四组图1</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p001.jpg</path>
+        </picture>
+        <picture id="68">
+            <name>摄影厅第四组图2</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p002.jpg</path>
+        </picture>
+        <picture id="69">
+            <name>摄影厅第四组图3</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p003.jpg</path>
+        </picture>
+        <picture id="70">
+            <name>摄影厅第四组图4</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p004.jpg</path>
+        </picture>
+        <picture id="71">
+            <name>摄影厅第四组图5</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p005.jpg</path>
+        </picture>
+        <picture id="72">
+            <name>摄影厅第四组图6</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p006.jpg</path>
+        </picture>
+        <picture id="73">
+            <name>摄影厅第四组图7</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p007.jpg</path>
+        </picture>
+        <picture id="74">
+            <name>摄影厅第四组图8</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p008.jpg</path>
+        </picture>
+        <picture id="75">
+            <name>摄影厅第四组图9</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p009.jpg</path>
+        </picture>
+        <picture id="76">
+            <name>摄影厅第四组图10</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p010.jpg</path>
+        </picture>
+        <picture id="77">
+            <name>摄影厅第四组图11</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p011.jpg</path>
+        </picture>
+        <picture id="78">
+            <name>摄影厅第四组图12</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p012.jpg</path>
+        </picture>
+        <picture id="79">
+            <name>摄影厅第四组图13</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p013.jpg</path>
+        </picture>
+        <picture id="80">
+            <name>摄影厅第四组图14</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p014.jpg</path>
+        </picture>
+        <picture id="81">
+            <name>摄影厅第四组图15</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p015.jpg</path>
+        </picture>
+        <picture id="82">
+            <name>摄影厅第四组图16</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p016.jpg</path>
+        </picture>
+        <picture id="83">
+            <name>摄影厅第四组图17</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p017.jpg</path>
+        </picture>
+        <picture id="84">
+            <name>摄影厅第四组图18</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p018.jpg</path>
+        </picture>
+        <picture id="85">
+            <name>摄影厅第四组图19</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p019.jpg</path>
+        </picture>
+        <picture id="86">
+            <name>摄影厅第四组图20</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p020.jpg</path>
+        </picture>
+        <picture id="87">
+            <name>摄影厅第四组图21</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p021.jpg</path>
+        </picture>
+        <picture id="88">
+            <name>摄影厅第四组图22</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p022.jpg</path>
+        </picture>
+        <picture id="89">
+            <name>摄影厅第四组图23</name>
+            <path>../zhaopian/sheyingting/group4/syg_rwfg_p023.jpg</path>
+        </picture>
+
+        <picture id="90">
+            <name>摄影厅第五组图1</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p001.jpg</path>
+        </picture>
+        <picture id="91">
+            <name>摄影厅第五组图2</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p002.jpg</path>
+        </picture>
+        <picture id="92">
+            <name>摄影厅第五组图3</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p003.jpg</path>
+        </picture>
+        <picture id="93">
+            <name>摄影厅第五组图4</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p004.jpg</path>
+        </picture>
+        <picture id="94">
+            <name>摄影厅第五组图5</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p005.jpg</path>
+        </picture>
+        <picture id="95">
+            <name>摄影厅第五组图6</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p006.jpg</path>
+        </picture>
+        <picture id="96">
+            <name>摄影厅第五组图7</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p007.jpg</path>
+        </picture>
+        <picture id="97">
+            <name>摄影厅第五组图8</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p008.jpg</path>
+        </picture>
+        <picture id="98">
+            <name>摄影厅第五组图9</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p009.jpg</path>
+        </picture>
+        <picture id="99">
+            <name>摄影厅第五组图10</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p010.jpg</path>
+        </picture>
+        <picture id="100">
+            <name>摄影厅第五组图11</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p011.jpg</path>
+        </picture>
+        <picture id="101">
+            <name>摄影厅第五组图12</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p012.jpg</path>
+        </picture>
+        <picture id="102">
+            <name>摄影厅第五组图13</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p013.jpg</path>
+        </picture>
+        <picture id="103">
+            <name>摄影厅第五组图14</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p014.jpg</path>
+        </picture>
+        <picture id="104">
+            <name>摄影厅第五组图15</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p015.jpg</path>
+        </picture>
+        <picture id="105">
+            <name>摄影厅第五组图16</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p016.jpg</path>
+        </picture>
+        <picture id="106">
+            <name>摄影厅第五组图17</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p017.jpg</path>
+        </picture>
+        <picture id="107">
+            <name>摄影厅第五组图18</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p018.jpg</path>
+        </picture>
+        <picture id="108">
+            <name>摄影厅第五组图19</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p019.jpg</path>
+        </picture>
+        <picture id="109">
+            <name>摄影厅第五组图20</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p020.jpg</path>
+        </picture>
+        <picture id="110">
+            <name>摄影厅第五组图21</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p021.jpg</path>
+        </picture>
+        <picture id="111">
+            <name>摄影厅第五组图22</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p022.jpg</path>
+        </picture>
+        <picture id="112">
+            <name>摄影厅第五组图23</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p023.jpg</path>
+        </picture>
+        <picture id="113">
+            <name>摄影厅第五组图24</name>
+            <path>../zhaopian/sheyingting/group5/syg_wmfw_p024.jpg</path>
+        </picture>
+
+        <picture id="114">
+            <name>摄影厅第六组图1</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p001.jpg</path>
+        </picture>
+        <picture id="115">
+            <name>摄影厅第六组图2</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p002.jpg</path>
+        </picture>
+        <picture id="116">
+            <name>摄影厅第六组图3</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p003.jpg</path>
+        </picture>
+        <picture id="117">
+            <name>摄影厅第六组图4</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p004.jpg</path>
+        </picture>
+        <picture id="118">
+            <name>摄影厅第六组图5</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p005.jpg</path>
+        </picture>
+        <picture id="119">
+            <name>摄影厅第六组图6</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p006.jpg</path>
+        </picture>
+        <picture id="120">
+            <name>摄影厅第六组图7</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p007.jpg</path>
+        </picture>
+        <picture id="121">
+            <name>摄影厅第六组图8</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p008.jpg</path>
+        </picture>
+        <picture id="122">
+            <name>摄影厅第六组图9</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p009.jpg</path>
+        </picture>
+        <picture id="123">
+            <name>摄影厅第六组图11</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p011.jpg</path>
+        </picture>
+        <picture id="124">
+            <name>摄影厅第六组图12</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p012.jpg</path>
+        </picture>
+        <picture id="125">
+            <name>摄影厅第六组图13</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p013.jpg</path>
+        </picture>
+        <picture id="126">
+            <name>摄影厅第六组图14</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p014.jpg</path>
+        </picture>
+        <picture id="127">
+            <name>摄影厅第六组图15</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p015.jpg</path>
+        </picture>
+        <picture id="128">
+            <name>摄影厅第六组图16</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p016.jpg</path>
+        </picture>
+        <picture id="129">
+            <name>摄影厅第六组图17</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p017.jpg</path>
+        </picture>
+        <picture id="130">
+            <name>摄影厅第六组图18</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p018.jpg</path>
+        </picture>
+        <picture id="131">
+            <name>摄影厅第六组图19</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p019.jpg</path>
+        </picture>
+        <picture id="132">
+            <name>摄影厅第六组图20</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p020.jpg</path>
+        </picture>
+        <picture id="133">
+            <name>摄影厅第六组图21</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p021.jpg</path>
+        </picture>
+        <picture id="134">
+            <name>摄影厅第六组图22</name>
+            <path>../zhaopian/sheyingting/group6/syg_ywgz_p022.jpg</path>
+        </picture>
+
+    </ting>
+
+    <ting id="2">
+        <picture id="1">
+            <name>专题馆摄影作品厅1</name>
+            <path>../zhaopian/zhuantiguan/syzp/1.jpg</path>
+        </picture>
+        <picture id="2">
+            <name>专题馆摄影作品厅2</name>
+            <path>../zhaopian/zhuantiguan/syzp/2.jpg</path>
+        </picture>
+        <picture id="3">
+            <name>专题馆摄影作品厅3</name>
+            <path>../zhaopian/zhuantiguan/syzp/3.jpg</path>
+        </picture>
+        <picture id="4">
+            <name>专题馆摄影作品厅4</name>
+            <path>../zhaopian/zhuantiguan/syzp/4.jpg</path>
+        </picture>
+        <picture id="5">
+            <name>专题馆摄影作品厅5</name>
+            <path>../zhaopian/zhuantiguan/syzp/5.jpg</path>
+        </picture>
+        <picture id="6">
+            <name>专题馆摄影作品厅6</name>
+            <path>../zhaopian/zhuantiguan/syzp/6.jpg</path>
+        </picture>
+        <picture id="7">
+            <name>专题馆摄影作品厅7</name>
+            <path>../zhaopian/zhuantiguan/syzp/7.jpg</path>
+        </picture>
+        <picture id="8">
+            <name>专题馆摄影作品厅8</name>
+            <path>../zhaopian/zhuantiguan/syzp/8.jpg</path>
+        </picture>
+        <picture id="9">
+            <name>专题馆摄影作品厅9</name>
+            <path>../zhaopian/zhuantiguan/syzp/9.jpg</path>
+        </picture>
+        <picture id="10">
+            <name>专题馆摄影作品厅10</name>
+            <path>../zhaopian/zhuantiguan/syzp/10.jpg</path>
+        </picture>
+        <picture id="11">
+            <name>专题馆摄影作品厅11</name>
+            <path>../zhaopian/zhuantiguan/syzp/11.jpg</path>
+        </picture>
+        <picture id="12">
+            <name>专题馆摄影作品厅12</name>
+            <path>../zhaopian/zhuantiguan/syzp/12.jpg</path>
+        </picture>
+        <picture id="13">
+            <name>专题馆摄影作品厅13</name>
+            <path>../zhaopian/zhuantiguan/syzp/13.jpg</path>
+        </picture>
+        <picture id="14">
+            <name>专题馆摄影作品厅14</name>
+            <path>../zhaopian/zhuantiguan/syzp/14.jpg</path>
+        </picture>
+        <picture id="15">
+            <name>专题馆摄影作品厅15</name>
+            <path>../zhaopian/zhuantiguan/syzp/15.jpg</path>
+        </picture>
+        <picture id="16">
+            <name>专题馆摄影作品厅16</name>
+            <path>../zhaopian/zhuantiguan/syzp/16.jpg</path>
+        </picture>
+        <picture id="17">
+            <name>专题馆摄影作品厅17</name>
+            <path>../zhaopian/zhuantiguan/syzp/17.jpg</path>
+        </picture>
+        <picture id="18">
+            <name>专题馆摄影作品厅18</name>
+            <path>../zhaopian/zhuantiguan/syzp/18.jpg</path>
+        </picture>
+        <picture id="19">
+            <name>专题馆摄影作品厅19</name>
+            <path>../zhaopian/zhuantiguan/syzp/19.jpg</path>
+        </picture>
+        <picture id="20">
+            <name>专题馆摄影作品厅20</name>
+            <path>../zhaopian/zhuantiguan/syzp/20.jpg</path>
+        </picture>
+        <picture id="21">
+            <name>专题馆摄影作品厅21</name>
+            <path>../zhaopian/zhuantiguan/syzp/21.jpg</path>
+        </picture>
+        <picture id="22">
+            <name>专题馆摄影作品厅22</name>
+            <path>../zhaopian/zhuantiguan/syzp/22.jpg</path>
+        </picture>
+        <picture id="23">
+            <name>专题馆摄影作品厅23</name>
+            <path>../zhaopian/zhuantiguan/syzp/23.jpg</path>
+        </picture>
+        <picture id="24">
+            <name>专题馆摄影作品厅24</name>
+            <path>../zhaopian/zhuantiguan/syzp/24.jpg</path>
+        </picture>
+        <picture id="25">
+            <name>专题馆摄影作品厅25</name>
+            <path>../zhaopian/zhuantiguan/syzp/25.jpg</path>
+        </picture>
+        <picture id="26">
+            <name>专题馆摄影作品厅26</name>
+            <path>../zhaopian/zhuantiguan/syzp/26.jpg</path>
+        </picture>
+        <picture id="27">
+            <name>专题馆摄影作品厅27</name>
+            <path>../zhaopian/zhuantiguan/syzp/27.jpg</path>
+        </picture>
+        <picture id="28">
+            <name>专题馆摄影作品厅28</name>
+            <path>../zhaopian/zhuantiguan/syzp/28.jpg</path>
+        </picture>
+        <picture id="29">
+            <name>专题馆摄影作品厅29</name>
+            <path>../zhaopian/zhuantiguan/syzp/29.jpg</path>
+        </picture>
+        <picture id="30">
+            <name>专题馆摄影作品厅30</name>
+            <path>../zhaopian/zhuantiguan/syzp/30.jpg</path>
+        </picture>
+        <picture id="31">
+            <name>专题馆摄影作品厅31</name>
+            <path>../zhaopian/zhuantiguan/syzp/31.jpg</path>
+        </picture>
+        <picture id="32">
+            <name>专题馆摄影作品厅32</name>
+            <path>../zhaopian/zhuantiguan/syzp/32.jpg</path>
+        </picture>
+        <picture id="33">
+            <name>专题馆摄影作品厅33</name>
+            <path>../zhaopian/zhuantiguan/syzp/33.jpg</path>
+        </picture>
+        <picture id="34">
+            <name>专题馆摄影作品厅34</name>
+            <path>../zhaopian/zhuantiguan/syzp/34.jpg</path>
+        </picture>
+        <picture id="35">
+            <name>专题馆摄影作品厅35</name>
+            <path>../zhaopian/zhuantiguan/syzp/35.jpg</path>
+        </picture>
+        <picture id="36">
+            <name>专题馆摄影作品厅36</name>
+            <path>../zhaopian/zhuantiguan/syzp/36.jpg</path>
+        </picture>
+        <picture id="37">
+            <name>专题馆摄影作品厅37</name>
+            <path>../zhaopian/zhuantiguan/syzp/37.jpg</path>
+        </picture>
+        <picture id="38">
+            <name>专题馆摄影作品厅38</name>
+            <path>../zhaopian/zhuantiguan/syzp/38.jpg</path>
+        </picture>
+        <picture id="39">
+            <name>专题馆摄影作品厅39</name>
+            <path>../zhaopian/zhuantiguan/syzp/39.jpg</path>
+        </picture>
+        <picture id="40">
+            <name>专题馆摄影作品厅40</name>
+            <path>../zhaopian/zhuantiguan/syzp/40.jpg</path>
+        </picture>
+        <picture id="41">
+            <name>专题馆摄影作品厅41</name>
+            <path>../zhaopian/zhuantiguan/syzp/41.jpg</path>
+        </picture>
+        <picture id="42">
+            <name>专题馆摄影作品厅42</name>
+            <path>../zhaopian/zhuantiguan/syzp/42.jpg</path>
+        </picture>
+        <picture id="43">
+            <name>专题馆摄影作品厅43</name>
+            <path>../zhaopian/zhuantiguan/syzp/43.jpg</path>
+        </picture>
+        <picture id="44">
+            <name>专题馆摄影作品厅44</name>
+            <path>../zhaopian/zhuantiguan/syzp/44.jpg</path>
+        </picture>
+        <picture id="45">
+            <name>专题馆摄影作品厅45</name>
+            <path>../zhaopian/zhuantiguan/syzp/45.jpg</path>
+        </picture>
+        <picture id="46">
+            <name>专题馆摄影作品厅46</name>
+            <path>../zhaopian/zhuantiguan/syzp/46.jpg</path>
+        </picture>
+        <picture id="47">
+            <name>专题馆摄影作品厅47</name>
+            <path>../zhaopian/zhuantiguan/syzp/47.jpg</path>
+        </picture>
+        <picture id="48">
+            <name>专题馆摄影作品厅48</name>
+            <path>../zhaopian/zhuantiguan/syzp/48.jpg</path>
+        </picture>
+        <picture id="49">
+            <name>专题馆摄影作品厅49</name>
+            <path>../zhaopian/zhuantiguan/syzp/49.jpg</path>
+        </picture>
+        <picture id="50">
+            <name>专题馆摄影作品厅50</name>
+            <path>../zhaopian/zhuantiguan/syzp/50.jpg</path>
+        </picture>
+        <picture id="51">
+            <name>专题馆摄影作品厅51</name>
+            <path>../zhaopian/zhuantiguan/syzp/51.jpg</path>
+        </picture>
+        <picture id="52">
+        <name>专题馆摄影作品厅52</name>
+        <path>../zhaopian/zhuantiguan/syzp/52.jpg</path>
+        </picture>
+
+
+
+        <picture id="53">
+            <name>专题馆书法作品厅1</name>
+            <path>../zhaopian/zhuantiguan/sfg/1.jpg</path>
+        </picture>
+        <picture id="54">
+            <name>专题馆书法作品厅2</name>
+            <path>../zhaopian/zhuantiguan/sfg/2.jpg</path>
+        </picture>
+        <picture id="55">
+            <name>专题馆书法作品厅3</name>
+            <path>../zhaopian/zhuantiguan/sfg/3.jpg</path>
+        </picture>
+        <picture id="56">
+            <name>专题馆书法作品厅4</name>
+            <path>../zhaopian/zhuantiguan/sfg/4.jpg</path>
+        </picture>
+        <picture id="57">
+            <name>专题馆书法作品厅5</name>
+            <path>../zhaopian/zhuantiguan/sfg/5.jpg</path>
+        </picture>
+        <picture id="58">
+            <name>专题馆书法作品厅6</name>
+            <path>../zhaopian/zhuantiguan/sfg/6.jpg</path>
+        </picture>
+        <picture id="59">
+            <name>专题馆书法作品厅7</name>
+            <path>../zhaopian/zhuantiguan/sfg/7.jpg</path>
+        </picture>
+        <picture id="60">
+            <name>专题馆书法作品厅8</name>
+            <path>../zhaopian/zhuantiguan/sfg/8.jpg</path>
+        </picture>
+        <picture id="61">
+            <name>专题馆书法作品厅9</name>
+            <path>../zhaopian/zhuantiguan/sfg/9.jpg</path>
+        </picture>
+        <picture id="62">
+            <name>专题馆书法作品厅10</name>
+            <path>../zhaopian/zhuantiguan/sfg/10.jpg</path>
+        </picture>
+        <picture id="63">
+            <name>专题馆书法作品厅11</name>
+            <path>../zhaopian/zhuantiguan/sfg/11.jpg</path>
+        </picture>
+        <picture id="64">
+            <name>专题馆书法作品厅12</name>
+            <path>../zhaopian/zhuantiguan/sfg/12.jpg</path>
+        </picture>
+        <picture id="65">
+            <name>专题馆书法作品厅13</name>
+            <path>../zhaopian/zhuantiguan/sfg/13.jpg</path>
+        </picture>
+        <picture id="66">
+            <name>专题馆书法作品厅14</name>
+            <path>../zhaopian/zhuantiguan/sfg/14.jpg</path>
+        </picture>
+        <picture id="67">
+            <name>专题馆书法作品厅15</name>
+            <path>../zhaopian/zhuantiguan/sfg/15.jpg</path>
+        </picture>
+        <picture id="68">
+            <name>专题馆书法作品厅16</name>
+            <path>../zhaopian/zhuantiguan/sfg/16.jpg</path>
+        </picture>
+        <picture id="69">
+            <name>专题馆书法作品厅17</name>
+            <path>../zhaopian/zhuantiguan/sfg/17.jpg</path>
+        </picture>
+        <picture id="70">
+            <name>专题馆书法作品厅18</name>
+            <path>../zhaopian/zhuantiguan/sfg/18.jpg</path>
+        </picture>
+        <picture id="71">
+            <name>专题馆书法作品厅19</name>
+            <path>../zhaopian/zhuantiguan/sfg/19.jpg</path>
+        </picture>
+        <picture id="72">
+            <name>专题馆书法作品厅20</name>
+            <path>../zhaopian/zhuantiguan/sfg/20.jpg</path>
+        </picture>
+        <picture id="73">
+            <name>专题馆书法作品厅21</name>
+            <path>../zhaopian/zhuantiguan/sfg/21.jpg</path>
+        </picture>
+        <picture id="74">
+            <name>专题馆书法作品厅22</name>
+            <path>../zhaopian/zhuantiguan/sfg/22.jpg</path>
+        </picture>
+        <picture id="75">
+            <name>专题馆书法作品厅23</name>
+            <path>../zhaopian/zhuantiguan/sfg/23.jpg</path>
+        </picture>
+        <picture id="76">
+            <name>专题馆书法作品厅24</name>
+            <path>../zhaopian/zhuantiguan/sfg/24.jpg</path>
+        </picture>
+        <picture id="77">
+            <name>专题馆书法作品厅25</name>
+            <path>../zhaopian/zhuantiguan/sfg/25.jpg</path>
+        </picture>
+        <picture id="78">
+            <name>专题馆书法作品厅26</name>
+            <path>../zhaopian/zhuantiguan/sfg/26.jpg</path>
+        </picture>
+        <picture id="79">
+            <name>专题馆书法作品厅27</name>
+            <path>../zhaopian/zhuantiguan/sfg/27.jpg</path>
+        </picture>
+        <picture id="80">
+            <name>专题馆书法作品厅28</name>
+            <path>../zhaopian/zhuantiguan/sfg/28.jpg</path>
+        </picture>
+        <picture id="81">
+            <name>专题馆书法作品厅29</name>
+            <path>../zhaopian/zhuantiguan/sfg/29.jpg</path>
+        </picture>
+        <picture id="82">
+            <name>专题馆书法作品厅30</name>
+            <path>../zhaopian/zhuantiguan/sfg/30.jpg</path>
+        </picture>
+        <picture id="83">
+            <name>专题馆书法作品厅31</name>
+            <path>../zhaopian/zhuantiguan/sfg/31.jpg</path>
+        </picture>
+
+
+
+        <picture id="84">
+            <name>专题馆美术作品厅1</name>
+            <path>../zhaopian/zhuantiguan/msg/1.jpg</path>
+        </picture>
+        <picture id="85">
+            <name>专题馆美术作品厅2</name>
+            <path>../zhaopian/zhuantiguan/msg/2.jpg</path>
+        </picture>
+        <picture id="86">
+            <name>专题馆美术作品厅3</name>
+            <path>../zhaopian/zhuantiguan/msg/3.jpg</path>
+        </picture>
+        <picture id="87">
+            <name>专题馆美术作品厅4</name>
+            <path>../zhaopian/zhuantiguan/msg/4.jpg</path>
+        </picture>
+        <picture id="88">
+            <name>专题馆美术作品厅5</name>
+            <path>../zhaopian/zhuantiguan/msg/5.jpg</path>
+        </picture>
+        <picture id="89">
+            <name>专题馆美术作品厅6</name>
+            <path>../zhaopian/zhuantiguan/msg/6.jpg</path>
+        </picture>
+        <picture id="90">
+            <name>专题馆美术作品厅7</name>
+            <path>../zhaopian/zhuantiguan/msg/7.jpg</path>
+        </picture>
+        <picture id="91">
+            <name>专题馆美术作品厅8</name>
+            <path>../zhaopian/zhuantiguan/msg/8.jpg</path>
+        </picture>
+        <picture id="92">
+            <name>专题馆美术作品厅9</name>
+            <path>../zhaopian/zhuantiguan/msg/9.jpg</path>
+        </picture>
+        <picture id="93">
+            <name>专题馆美术作品厅10</name>
+            <path>../zhaopian/zhuantiguan/msg/10.jpg</path>
+        </picture>
+        <picture id="94">
+            <name>专题馆美术作品厅11</name>
+            <path>../zhaopian/zhuantiguan/msg/11.jpg</path>
+        </picture>
+        <picture id="95">
+            <name>专题馆美术作品厅12</name>
+            <path>../zhaopian/zhuantiguan/msg/12.jpg</path>
+        </picture>
+        <picture id="96">
+            <name>专题馆美术作品厅13</name>
+            <path>../zhaopian/zhuantiguan/msg/13.jpg</path>
+        </picture>
+        <picture id="97">
+            <name>专题馆美术作品厅14</name>
+            <path>../zhaopian/zhuantiguan/msg/14.jpg</path>
+        </picture>
+        <picture id="98">
+            <name>专题馆美术作品厅15</name>
+            <path>../zhaopian/zhuantiguan/msg/15.jpg</path>
+        </picture>
+        <picture id="99">
+            <name>专题馆美术作品厅16</name>
+            <path>../zhaopian/zhuantiguan/msg/16.jpg</path>
+        </picture>
+        <picture id="100">
+            <name>专题馆美术作品厅17</name>
+            <path>../zhaopian/zhuantiguan/msg/17.jpg</path>
+        </picture>
+        <picture id="101">
+            <name>专题馆美术作品厅18</name>
+            <path>../zhaopian/zhuantiguan/msg/18.jpg</path>
+        </picture>
+        <picture id="102">
+            <name>专题馆美术作品厅19</name>
+            <path>../zhaopian/zhuantiguan/msg/19.jpg</path>
+        </picture>
+        <picture id="103">
+            <name>专题馆美术作品厅20</name>
+            <path>../zhaopian/zhuantiguan/msg/20.jpg</path>
+        </picture>
+        <picture id="104">
+            <name>专题馆美术作品厅21</name>
+            <path>../zhaopian/zhuantiguan/msg/21.jpg</path>
+        </picture>
+        <picture id="105">
+            <name>专题馆美术作品厅22</name>
+            <path>../zhaopian/zhuantiguan/msg/22.jpg</path>
+        </picture>
+        <picture id="106">
+            <name>专题馆美术作品厅23</name>
+            <path>../zhaopian/zhuantiguan/msg/23.jpg</path>
+        </picture>
+        <picture id="107">
+            <name>专题馆美术作品厅24</name>
+            <path>../zhaopian/zhuantiguan/msg/24.jpg</path>
+        </picture>
+        <picture id="108">
+            <name>专题馆美术作品厅25</name>
+            <path>../zhaopian/zhuantiguan/msg/25.jpg</path>
+        </picture>
+        <picture id="109">
+            <name>专题馆美术作品厅26</name>
+            <path>../zhaopian/zhuantiguan/msg/26.jpg</path>
+        </picture>
+        <picture id="110">
+            <name>专题馆美术作品厅27</name>
+            <path>../zhaopian/zhuantiguan/msg/27.jpg</path>
+        </picture>
+    </ting>
+
+    <ting id="3">
+    <picture id="1">
+        <name>文学馆报告文学厅1</name>
+        <path>../zhaopian/wenxueguan/bgwx/1.jpg</path>
+    </picture>
+        <picture id="2">
+            <name>文学馆报告文学厅2</name>
+            <path>../zhaopian/wenxueguan/bgwx/2.jpg</path>
+        </picture>
+        <picture id="3">
+            <name>文学馆报告文学厅3</name>
+            <path>../zhaopian/wenxueguan/bgwx/3.jpg</path>
+        </picture>
+        <picture id="4">
+            <name>文学馆报告文学厅4</name>
+            <path>../zhaopian/wenxueguan/bgwx/4.jpg</path>
+        </picture>
+        <picture id="5">
+            <name>文学馆报告文学厅5</name>
+            <path>../zhaopian/wenxueguan/bgwx/5.jpg</path>
+        </picture>
+        <picture id="6">
+            <name>文学馆报告文学厅6</name>
+            <path>../zhaopian/wenxueguan/bgwx/6.jpg</path>
+        </picture>
+        <picture id="7">
+            <name>文学馆报告文学厅7</name>
+            <path>../zhaopian/wenxueguan/bgwx/7.jpg</path>
+        </picture>
+        <picture id="8">
+            <name>文学馆报告文学厅8</name>
+            <path>../zhaopian/wenxueguan/bgwx/8.jpg</path>
+        </picture>
+        <picture id="9">
+            <name>文学馆报告文学厅9</name>
+            <path>../zhaopian/wenxueguan/bgwx/9.jpg</path>
+        </picture>
+        <picture id="10">
+            <name>文学馆报告文学厅10</name>
+            <path>../zhaopian/wenxueguan/bgwx/10.jpg</path>
+        </picture>
+        <picture id="11">
+            <name>文学馆报告文学厅11</name>
+            <path>../zhaopian/wenxueguan/bgwx/11.jpg</path>
+        </picture>
+
+
+    <picture id="12">
+        <name>文学馆诗歌厅1</name>
+        <path>../zhaopian/wenxueguan/sg/1.jpg</path>
+    </picture>
+    <picture id="13">
+        <name>文学馆诗歌厅2</name>
+        <path>../zhaopian/wenxueguan/sg/2.jpg</path>
+    </picture>
+    <picture id="14">
+        <name>文学馆诗歌厅3</name>
+        <path>../zhaopian/wenxueguan/sg/3.jpg</path>
+    </picture>
+    <picture id="15">
+        <name>文学馆诗歌厅4</name>
+        <path>../zhaopian/wenxueguan/sg/4.jpg</path>
+    </picture>
+    <picture id="16">
+        <name>文学馆诗歌厅5</name>
+        <path>../zhaopian/wenxueguan/sg/5.jpg</path>
+    </picture>
+    <picture id="17">
+        <name>文学馆诗歌厅6</name>
+        <path>../zhaopian/wenxueguan/sg/6.jpg</path>
+    </picture>
+    <picture id="18">
+        <name>文学馆诗歌厅7</name>
+        <path>../zhaopian/wenxueguan/sg/7.jpg</path>
+    </picture>
+    <picture id="19">
+        <name>文学馆诗歌厅8</name>
+        <path>../zhaopian/wenxueguan/sg/8.jpg</path>
+    </picture>
+    <picture id="20">
+        <name>文学馆诗歌厅9</name>
+        <path>../zhaopian/wenxueguan/sg/9.jpg</path>
+    </picture>
+    <picture id="21">
+        <name>文学馆诗歌厅10</name>
+        <path>../zhaopian/wenxueguan/sg/10.jpg</path>
+    </picture>
+    <picture id="22">
+        <name>文学馆诗歌厅11</name>
+        <path>../zhaopian/wenxueguan/sg/11.jpg</path>
+    </picture>
+    <picture id="23">
+        <name>文学馆诗歌厅12</name>
+        <path>../zhaopian/wenxueguan/sg/12.jpg</path>
+    </picture>
+    <picture id="24">
+        <name>文学馆诗歌厅13</name>
+        <path>../zhaopian/wenxueguan/sg/13.jpg</path>
+    </picture>
+    <picture id="25">
+        <name>文学馆诗歌厅14</name>
+        <path>../zhaopian/wenxueguan/sg/14.jpg</path>
+    </picture>
+    <picture id="26">
+        <name>文学馆诗歌厅15</name>
+        <path>../zhaopian/wenxueguan/sg/15.jpg</path>
+    </picture>
+    <picture id="27">
+        <name>文学馆诗歌厅16</name>
+        <path>../zhaopian/wenxueguan/sg/16.jpg</path>
+    </picture>
+
+
+    <picture id="28">
+        <name>文学馆散文厅1</name>
+        <path>../zhaopian/wenxueguan/sw/1.jpg</path>
+    </picture>
+    <picture id="29">
+        <name>文学馆散文厅2</name>
+        <path>../zhaopian/wenxueguan/sw/2.jpg</path>
+    </picture>
+    <picture id="30">
+        <name>文学馆散文厅3</name>
+        <path>../zhaopian/wenxueguan/sw/3.jpg</path>
+    </picture>
+    <picture id="31">
+        <name>文学馆散文厅4</name>
+        <path>../zhaopian/wenxueguan/sw/4.jpg</path>
+    </picture>
+    <picture id="32">
+        <name>文学馆散文厅5</name>
+        <path>../zhaopian/wenxueguan/sw/5.jpg</path>
+    </picture>
+    <picture id="33">
+        <name>文学馆散文厅6</name>
+        <path>../zhaopian/wenxueguan/sw/6.jpg</path>
+    </picture>
+    <picture id="34">
+        <name>文学馆散文厅7</name>
+        <path>../zhaopian/wenxueguan/sw/7.jpg</path>
+    </picture>
+    <picture id="35">
+        <name>文学馆散文厅8</name>
+        <path>../zhaopian/wenxueguan/sw/8.jpg</path>
+    </picture>
+    <picture id="36">
+        <name>文学馆散文厅9</name>
+        <path>../zhaopian/wenxueguan/sw/9.jpg</path>
+    </picture>
+    <picture id="37">
+        <name>文学馆散文厅10</name>
+        <path>../zhaopian/wenxueguan/sw/10.jpg</path>
+    </picture>
+    <picture id="38">
+        <name>文学馆散文厅11</name>
+        <path>../zhaopian/wenxueguan/sw/11.jpg</path>
+    </picture>
+    <picture id="39">
+        <name>文学馆散文厅12</name>
+        <path>../zhaopian/wenxueguan/sw/12.jpg</path>
+    </picture>
+    <picture id="40">
+        <name>文学馆散文厅13</name>
+        <path>../zhaopian/wenxueguan/sw/13.jpg</path>
+    </picture>
+    <picture id="41">
+        <name>文学馆散文厅14</name>
+        <path>../zhaopian/wenxueguan/sw/14.jpg</path>
+    </picture>
+
+
+    <picture id="42">
+        <name>文学馆小说厅1</name>
+        <path>../zhaopian/wenxueguan/xs/1.jpg</path>
+    </picture>
+    <picture id="43">
+        <name>文学馆小说厅2</name>
+        <path>../zhaopian/wenxueguan/xs/2.jpg</path>
+    </picture>
+    <picture id="44">
+        <name>文学馆小说厅3</name>
+        <path>../zhaopian/wenxueguan/xs/3.jpg</path>
+    </picture>
+    <picture id="45">
+        <name>文学馆小说厅4</name>
+        <path>../zhaopian/wenxueguan/xs/4.jpg</path>
+    </picture>
+    <picture id="46">
+        <name>文学馆小说厅5</name>
+        <path>../zhaopian/wenxueguan/xs/5.jpg</path>
+    </picture>
+    <picture id="47">
+        <name>文学馆小说厅6</name>
+        <path>../zhaopian/wenxueguan/xs/6.jpg</path>
+    </picture>
+    <picture id="48">
+        <name>文学馆小说厅7</name>
+        <path>../zhaopian/wenxueguan/xs/7.jpg</path>
+    </picture>
+    <picture id="49">
+        <name>文学馆小说厅8</name>
+        <path>../zhaopian/wenxueguan/xs/8.jpg</path>
+    </picture>
+    <picture id="50">
+        <name>文学馆小说厅9</name>
+        <path>../zhaopian/wenxueguan/xs/9.jpg</path>
+    </picture>
+    <picture id="51">
+        <name>文学馆小说厅10</name>
+        <path>../zhaopian/wenxueguan/xs/10.jpg</path>
+    </picture>
+    <picture id="52">
+        <name>文学馆小说厅11</name>
+        <path>../zhaopian/wenxueguan/xs/11.jpg</path>
+    </picture>
+    <picture id="53">
+        <name>文学馆小说厅12</name>
+        <path>../zhaopian/wenxueguan/xs/12.jpg</path>
+    </picture>
+    <picture id="54">
+        <name>文学馆小说厅13</name>
+        <path>../zhaopian/wenxueguan/xs/13.jpg</path>
+    </picture>
+    <picture id="55">
+        <name>文学馆小说厅14</name>
+        <path>../zhaopian/wenxueguan/xs/14.jpg</path>
+    </picture>
+    <picture id="56">
+        <name>文学馆小说厅15</name>
+        <path>../zhaopian/wenxueguan/xs/15.jpg</path>
+    </picture>
+
+    <picture id="57">
+        <name>文学馆戏剧厅1</name>
+        <path>../zhaopian/wenxueguan/xs/1.jpg</path>
+    </picture>
+    <picture id="58">
+        <name>文学馆戏剧厅2</name>
+        <path>../zhaopian/wenxueguan/xs/2.jpg</path>
+    </picture>
+    <picture id="59">
+        <name>文学馆戏剧厅3</name>
+        <path>../zhaopian/wenxueguan/xs/3.jpg</path>
+    </picture>
+    <picture id="60">
+        <name>文学馆戏剧厅4</name>
+        <path>../zhaopian/wenxueguan/xs/4.jpg</path>
+    </picture>
+    <picture id="61">
+        <name>文学馆戏剧厅5</name>
+        <path>../zhaopian/wenxueguan/xs/5.jpg</path>
+    </picture>
+    <picture id="62">
+        <name>文学馆戏剧厅6</name>
+        <path>../zhaopian/wenxueguan/xs/6.jpg</path>
+    </picture>
+    <picture id="63">
+        <name>文学馆戏剧厅7</name>
+        <path>../zhaopian/wenxueguan/xs/7.jpg</path>
+    </picture>
+    <picture id="64">
+        <name>文学馆戏剧厅8</name>
+        <path>../zhaopian/wenxueguan/xs/8.jpg</path>
+    </picture>
+    <picture id="65">
+        <name>文学馆戏剧厅9</name>
+        <path>../zhaopian/wenxueguan/xs/9.jpg</path>
+    </picture>
+    <picture id="66">
+        <name>文学馆戏剧厅10</name>
+        <path>../zhaopian/wenxueguan/xs/10.jpg</path>
+    </picture>
+    <picture id="67">
+        <name>文学馆戏剧厅11</name>
+        <path>../zhaopian/wenxueguan/xs/11.jpg</path>
+    </picture>
+    <picture id="68">
+        <name>文学馆戏剧厅12</name>
+        <path>../zhaopian/wenxueguan/xs/12.jpg</path>
+    </picture>
+    <picture id="69">
+        <name>文学馆戏剧厅13</name>
+        <path>../zhaopian/wenxueguan/xs/13.jpg</path>
+    </picture>
+    </ting>
+</root>

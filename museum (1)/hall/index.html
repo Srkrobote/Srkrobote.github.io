@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>大厅</title>
+<script type="text/javascript" src="three.js"></script>
+    <script src="three.extension.js"></script>
+    <script src="Mirror.js"></script>
+    <script src="../loadXML.js"></script>
+    <script type="text/javascript">
+
+
+
+
+    var renderer;  // A three.js WebGL or Canvas renderer.<script type="text/javascript" src="controls/OrbitControls.js">
+    var scene;     // The 3D scene that will be rendered, containing the model.
+    var camera;    // The camera that takes the picture of the scene.
+
+    var model; // The three.js object that represents the model.
+    var controls;
+    var rotateX = 0;   // rotation of model about the x-axis
+    var rotateY = 0;  // rotation of model about the y-axis
+    var rotateZ = 0;
+    var controls, clock;
+    var mouse = new THREE.Vector2;
+    var textureCube, cameraCube, sceneCube;
+    var HotSpots = [];
+    var raycaster = new THREE.Raycaster;
+    var WIDTH = window.innerWidth;
+    var HEIGHT = window.innerHeight;
+    var groundMirror;
+    var objArray = ["01","02"];
+    var objArray1 = ["05","06","07","66","zi","lyb"];
+    var objArray2 = ["11", "22"];
+  
+    var linkarray = ["http://museum.dbw.cn/nsy/index.html", "http://museum.dbw.cn/nsy/index.html", "http://museum.dbw.cn/nwx/index.html", "http://museum.dbw.cn/nwx/index.html", "http://museum.dbw.cn/nzt/index.html", "http://museum.dbw.cn/nzt/index.html"];
+    var proess;
+    var pss;
+    var psslength = 0;
+    var pssMax = 50;
+    var t = 0, stops2 = null;
+    var t2 = 0;
+    var one = 0;
+    var loader = new THREE.JSONLoader();
+    var scale = .1;
+    var jz1, jz2;
+    var time;
+    var str ;
+
+    function render() {
+        t++;
+//        if(time == 2){
+//            jz2.material.materials[15].map = pic1;
+//        }
+
+        requestAnimationFrame(render);
+        var delta = clock.getDelta();
+        controls.update(delta);
+        camera.position.y = 20;
+        //   collision1(x, -x, z, -z);
+        collision1(520, 360, 1400, 930);
+        //左侧墙 
+        collision(420, 355, 1300, 1232);
+        //右侧墙 
+        collision(520, 470, 1300, 1232);
+        //石碑
+        collision(490, 400, 1114, 1066);
+        //柱子
+       // collision(400, 374, 977, 935);
+        // collision(502, 475, 977, 935);
+     // console.log("camera.position.x:" + camera.position.x + ";camera.position.z:" + camera.position.z);
+        if (VerPot[5])
+            for (var i = 0; i < VerPot.length; i++)
+                if (Math.sqrt(Math.abs(camera.position.x - VerPotX[i]) * Math.abs(camera.position.x - VerPotX[i]) + Math.abs(camera.position.z - VerPotZ[i]) * Math.abs(camera.position.z - VerPotZ[i])) > 70)
+                    VerPot[i].scale.y = 1E-5;
+                else
+                    VerPot[i].scale.y =scale;
+
+        renderer.clear();
+        groundMirror.render();
+        renderer.render(scene, camera);
+      //  pross();
+        setTimeout(function () {
+            if (psslength >= 100 && one==0) {
+                camera.position.x = 430;
+                camera.position.y = 20;
+                camera.position.z = 1280;
+                controls.initialX = -1.6;
+                proess.style.display = "none";
+                one=1;
+            }
+        }, 2000);
+    }
+    function pross() {
+        psslength = psslength +2;
+        var ms = 100;
+        if (psslength < ms) {
+            pss.innerHTML = psslength + '%&nbsp;&nbsp;';
+            pss.style.width = psslength + '%';
+        }
+    }
+    function uppross(jindu) {
+        psslength = psslength + jindu;
+        var ms = 100;
+        if (psslength <= ms) {
+            pss.innerHTML = psslength + '%&nbsp;&nbsp;';
+            pss.style.width = psslength + '%';
+        }
+        else {
+            pss.innerHTML = '100%&nbsp;&nbsp;';
+            pss.style.width = '100%';
+        }
+    }
+    function init() {
+        time = 0;
+        proess = document.getElementById("proess");
+        proess.style.width = window.innerWidth - 30;
+        proess.style.height = window.innerHeight - 30;
+        pss = document.getElementById("proessP");
+        pss.style.top = (window.innerHeight - 110) + 'px';
+
+
+        var theCanvas = document.getElementById("cnvs");
+        theCanvas.width = window.innerWidth-30;
+        theCanvas.height = window.innerHeight-30;
+        if (!theCanvas || !theCanvas.getContext) {
+            return;
+        }
+        if (window.WebGLRenderingContext) {
+            renderer = new THREE.WebGLRenderer({
+                canvas: theCanvas,
+                antialias: true
+            });
+        }
+        if (!renderer) {
+            renderer = new THREE.CanvasRenderer({ canvas: theCanvas });
+            renderer.setSize(theCanvas.width, theCanvas.height);
+        }
+
+
+
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(50, theCanvas.width / theCanvas.height, 0.1, 1000000);
+        camera.position.x =430;
+        camera.position.y = 20;
+        camera.position.z =1280;
+        var hemiLight = new THREE.HemisphereLight(16777215, 16777215, 1);
+        hemiLight.position.set(0, 100, 0);
+        scene.add(hemiLight);
+        controls = new THREE.FirstPersonControls(camera);
+        controls.movementSpeed = 30;
+        controls.lookSpeed = .1;
+        controls.initialX = -1.6;
+        controls.initialY = 0;
+        clock = new THREE.Clock;
+
+
+        var planeGeo = new THREE.PlaneBufferGeometry(100.1, 100.1);
+        groundMirror = new THREE.Mirror(renderer, camera, { clipBias: 0.003, textureWidth: WIDTH, textureHeight: HEIGHT, color: 0x777777 });
+
+        var mirrorMesh = new THREE.Mesh(planeGeo, groundMirror.material);
+        mirrorMesh.add(groundMirror);
+        mirrorMesh.rotateX(-Math.PI / 2);
+        mirrorMesh.scale.set(100, 100, 100);
+        mirrorMesh.position.set(5.5, -3, 0);
+        scene.add(mirrorMesh);
+      
+        var len = objArray.length;
+        var len1 = objArray1.length;
+        var len2 = objArray2.length;
+       
+            loader.load("01/01.js", function (geometry, materials) {
+                jz1 = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                materials[10].transparent = true;
+                materials[10].opacity = .9;
+                jz1.scale.set(scale, scale, scale);
+                jz1.position.set(0, 0, 0);
+                jz1.rotation.set(0, 0, 0);
+                jz1.receiveShadow = true;
+                scene.add(jz1);
+                console.log("jz1",jz1);
+                uppross(10);
+            });
+           
+    loader.load("01/02.js", function (geometry, materials) {
+        var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+        object.scale.set(scale, scale, scale);
+        object.position.set(0, 0, 0);
+        object.rotation.set(0, 0, 0);
+        object.receiveShadow = true;
+        scene.add(object);
+        uppross(10);
+    });
+    
+    loader.load("02/01.js", function (geometry, materials) {
+        jz2 = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+        materials[12].transparent = true;
+        materials[12].opacity = .9;
+        jz2.scale.set(scale, scale, scale);
+        jz2.position.set(0, 0, 0);
+        jz2.rotation.set(0, 0, 0);
+        jz2.receiveShadow = true;
+        scene.add(jz2);
+        uppross(10);
+    });
+        for (var i = 0; i < len1; i++) {
+            loader.load("02/"+objArray1[i]+".js", function (geometry, materials) {
+                var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                object.scale.set(scale, scale, scale);
+                object.position.set(0, 0, 0);
+                object.rotation.set(0, 0, 0);
+                object.receiveShadow = true;
+                scene.add(object);
+                uppross(10);
+            });
+        }
+    
+        for (var i = 0; i < len2; i++) {
+            loader.load("03/" + objArray2[i] + ".js", function (geometry, materials) {
+                var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                object.scale.set(scale, scale, scale);
+                object.position.set(0, 0, 0);
+                object.rotation.set(0, 0, 0);
+                object.receiveShadow = true;
+                scene.add(object);
+                uppross(10);
+            });
+          
+        }
+  
+         setTimeout("addmen('sygm', 0)", 50);
+        setTimeout("addmen('syrk', 1)", 100);
+       setTimeout("addmen('wxgm', 2)", 150);
+        setTimeout("addmen('wxrk', 3)", 200);
+        setTimeout("addmen('ztgm', 4)", 250);
+        setTimeout("addmen('ztrk', 5)", 300);
+
+        uppross(10);
+        render();
+        window.addEventListener("resize", onWindowResize, false);
+        document.addEventListener("mousemove", onDocumentMouseMove, false);
+        document.addEventListener("mousedown", onDocumentMouseDown, false);
+        document.addEventListener("mouseup", onDocumentMouseUp, false);
+    }
+    var VerPotX = Array()
+  , VerPotZ = Array()
+  , VerPot = Array();
+ 
+    var tep = 0;
+    function addmen(mingcheng,b)
+    {
+        var TempX1 = Array()
+   , TempXmax = 0
+   , TempXmin = 0;
+        var TempZ1 = Array()
+          , TempZmax = 0
+          , TempZmin = 0;
+        console.log("k:"+b);
+        loader.load("rukou/" + mingcheng + ".js", function (geometry, materials) {
+            for (var i = 0; i < geometry.vertices.length; i++) {
+                TempX1[i] = geometry.vertices[i].x;
+                if (TempX1[TempXmax] < TempX1[i])
+                    TempXmax = i;
+                if (TempX1[TempXmin] > TempX1[i])
+                    TempXmin = i;
+                TempZ1[i] = geometry.vertices[i].z;
+                if (TempZ1[TempZmax] < TempZ1[i])
+                    TempZmax = i;
+                if (TempZ1[TempZmin] > TempZ1[i])
+                    TempZmin = i
+            }
+            VerPotX[b] = (geometry.vertices[TempXmax].x + geometry.vertices[TempXmin].x) / 2 * scale;
+            VerPotZ[b] = (geometry.vertices[TempZmax].z + geometry.vertices[TempZmin].z) / 2 * scale;
+            VerPot[b] = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            VerPot[b].scale.set(scale, scale, scale);
+            VerPot[b].position.set(0, 0, 0);
+          //  VerPot[b].visible = false;
+            scene.add(VerPot[b]);
+            HotSpots.push(VerPot[b]);
+            console.log("s:" + b);
+            tep = b;
+            //var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            //object.scale.set(scale, scale, scale);
+            //object.position.set(0, 0, 0);
+            //object.rotation.set(0, 0, 0);
+            //object.receiveShadow = true;
+            //scene.add(object);
+            //HotSpots.push(object);
+        });
+    }
+    function onWindowResize(event) {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+    }
+    function onDocumentMouseMove(event) {
+        event.preventDefault();
+        console.log("!!!", imgArr);
+        mouse.x = event.clientX / renderer.domElement.width * 2 - 1;
+        mouse.y = -(event.clientY / renderer.domElement.height) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        var k = raycaster.intersectObjects(HotSpots);
+        if (0 < k.length) {
+
+            for (var a = 0; a < HotSpots.length; a++) {
+                if (k[0].object == HotSpots[a]) {
+                    document.body.style.cursor = "pointer";
+                }
+            }
+        }
+        else {
+            document.body.style.cursor = "auto";
+
+        }
+    }
+    function onDocumentMouseDown(event) {
+        focus();
+        controls.lookSpeed = .1;
+        event.preventDefault();
+        mouse.x = event.clientX / renderer.domElement.width * 2 - 1;
+        mouse.y = -(event.clientY / renderer.domElement.height) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        var k = raycaster.intersectObjects(HotSpots);
+        if (0 < k.length) {
+            var l = HotSpots.length
+            for (var a = 0; a < l; a++) {
+                if (k[0].object == HotSpots[a]) {
+                    document.body.style.cursor = "pointer";
+                    window.location.href =linkarray[a];
+                }
+            }
+            controls.lookSpeed = 1E-5;
+        }
+    }
+    function onDocumentMouseUp(event) { }
+  
+    function collision(posX, negX, posZ, negZ) {
+      //  console.log("camera.position.x-" + camera.position.x + ";camera.position.z-" + camera.position.z);
+        if (camera.position.x < posX & camera.position.x > negX & camera.position.z > negZ & camera.position.z < posZ) {
+            if (camera.position.x - posX > -3.8) camera.position.x = posX;
+            else if (camera.position.x - negX < 3.8) camera.position.x = negX;
+            else if (camera.position.z - negZ < 3.8) camera.position.z = negZ;
+            else if (camera.position.z - posZ > -3.8) camera.position.z = posZ
+        }
+    }
+    function collision1(posX, negX, posZ, negZ) {
+        if (posX - camera.position.x < 3.8) {
+            camera.position.x = posX - 4;
+        }
+        if (camera.position.x - negX < 3.8)
+            camera.position.x = negX + 4;
+        if (posZ - camera.position.z < 4.8)
+            camera.position.z = posZ - 5;
+        if (camera.position.z - negZ < 4.8)
+            camera.position.z = negZ + 5;
+    }
+
+    /**
+     * 初始化贴图方法
+     */
+    var texLoader = new THREE.ImageLoader();
+    function CreateTex(tex) {
+        var mytexture = new THREE.Texture();
+        texLoader.load( tex, function ( image ) {
+            mytexture.image = image;
+            mytexture.needsUpdate = true;
+            pic1 =  mytexture;
+            time++;
+        } );
+    }
+</script>
+</head>
+<body onload="init()" bgcolor="#CCC" scroll="no">
+
+ <div id="proess" style="background:url(image/bg.jpg);background-size:100%;display:block; position:absolute;width:99%;height:99%; opacity:1">
+    <div id="proessP" style="background-color:red;height:14px;font-size:12px;text-align:right;position:relative;color:white;width:0;"></div>
+</div>
+<div style="float:left">
+   <canvas  id="cnvs" style="background-color:black"></canvas>
+</div>
+
+
+</body>
+</html>

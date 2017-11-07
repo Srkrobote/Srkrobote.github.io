@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>摄影馆</title>
+<script type="text/javascript" src="three.js"></script>
+    <script src="three.extension.js"></script>
+    <script src="Mirror.js"></script>
+    <script src="../loadXML.js"></script>
+    <script src="../loadTexture.js"></script>
+
+    <style>
+        canvas { width: 100%; height: 100%; }
+        body { border: none; overflow: hidden; margin: 0px; }
+        #box { width: 80%; padding: 10px; top: 7%; position: absolute; margin-left: 10%; margin-right: 10%; opacity: 1.0; }
+            #box .box { width: 100%; margin: 0 auto; padding: 0; float: left; background-color: #333; border-radius: 25px; }
+        #Close { width: 49px; margin: 0 auto; padding: 0; float: left; right: 20px; top: 20px; position: absolute; }
+            #Close img { width: 49px; height: 49px; overflow: hidden; }
+    </style>
+<script type="text/javascript">
+
+
+    var img_index = 0;  //使用的图片序号
+    var renderer;  // A three.js WebGL or Canvas renderer.<script type="text/javascript" src="controls/OrbitControls.js">
+    var scene;     // The 3D scene that will be rendered, containing the model.
+    var camera;    // The camera that takes the picture of the scene.
+
+    var model; // The three.js object that represents the model.
+    var controls;
+    var rotateX = 0;   // rotation of model about the x-axis
+    var rotateY = 0;  // rotation of model about the y-axis
+    var rotateZ = 0;
+    var controls, clock;
+    var mouse = new THREE.Vector2;
+    var textureCube, cameraCube, sceneCube;
+    var HotSpots = [];
+    var raycaster = new THREE.Raycaster;
+    var WIDTH = window.innerWidth;
+    var HEIGHT = window.innerHeight;
+    var scale = .03;
+    var groundMirror;
+    var objArray1 = ["syg_ldgh_p001", "syg_ldgh_p002", "syg_ldgh_p003", "syg_ldgh_p004", "syg_ldgh_p005", "syg_ldgh_p006", "syg_ldgh_p007", "syg_ldgh_p008", "syg_ldgh_p009", "syg_ldgh_p010", "syg_ldgh_p011", "syg_ldgh_p012", "syg_ldgh_p013", "syg_ldgh_p014", "syg_ldgh_p015", "syg_ldgh_p016", "syg_ldgh_p017", "syg_ldgh_p018", "syg_ldgh_p019", "syg_ldgh_p020", "syg_ldgh_p021", "syg_ldgh_p022", "syg_ldgh_p023"];
+    var objArray2 = ["syg_dwjs_p001", "syg_dwjs_p002", "syg_dwjs_p003", "syg_dwjs_p004", "syg_dwjs_p005", "syg_dwjs_p006", "syg_dwjs_p007", "syg_dwjs_p008", "syg_dwjs_p009", "syg_dwjs_p010", "syg_dwjs_p011", "syg_dwjs_p012", "syg_dwjs_p013", "syg_dwjs_p014", "syg_dwjs_p015", "syg_dwjs_p016", "syg_dwjs_p017", "syg_dwjs_p018", "syg_dwjs_p019", "syg_dwjs_p020", "syg_dwjs_p021", "syg_dwjs_p022", "syg_dwjs_p023", "syg_dwjs_p024"];
+    var objArray3 = ["syg_qxjy_p001", "syg_qxjy_p002", "syg_qxjy_p003", "syg_qxjy_p004", "syg_qxjy_p005", "syg_qxjy_p006", "syg_qxjy_p007", "syg_qxjy_p008", "syg_qxjy_p009", "syg_qxjy_p010", "syg_qxjy_p011", "syg_qxjy_p012", "syg_qxjy_p013", "syg_qxjy_p014", "syg_qxjy_p015", "syg_qxjy_p016", "syg_qxjy_p017", "syg_qxjy_p018", "syg_qxjy_p019"];
+    var objArray4 = ["syg_rwfg_p001", "syg_rwfg_p002", "syg_rwfg_p003", "syg_rwfg_p004", "syg_rwfg_p005", "syg_rwfg_p006", "syg_rwfg_p007", "syg_rwfg_p008", "syg_rwfg_p009", "syg_rwfg_p010", "syg_rwfg_p011", "syg_rwfg_p012", "syg_rwfg_p013", "syg_rwfg_p014", "syg_rwfg_p015", "syg_rwfg_p016", "syg_rwfg_p017", "syg_rwfg_p018", "syg_rwfg_p019", "syg_rwfg_p020", "syg_rwfg_p021", "syg_rwfg_p022", "syg_rwfg_p023"];
+    var objArray5 = ["syg_wmfw_p001", "syg_wmfw_p002", "syg_wmfw_p003", "syg_wmfw_p004", "syg_wmfw_p005", "syg_wmfw_p006", "syg_wmfw_p007", "syg_wmfw_p008", "syg_wmfw_p009", "syg_wmfw_p010", "syg_wmfw_p011", "syg_wmfw_p012", "syg_wmfw_p013", "syg_wmfw_p014", "syg_wmfw_p015", "syg_wmfw_p016", "syg_wmfw_p017", "syg_wmfw_p018", "syg_wmfw_p019", "syg_wmfw_p020", "syg_wmfw_p021", "syg_wmfw_p022", "syg_wmfw_p023", "syg_wmfw_p024"];
+    var objArray6 = ["syg_ywgz_p001", "syg_ywgz_p002", "syg_ywgz_p003", "syg_ywgz_p004", "syg_ywgz_p005", "syg_ywgz_p006", "syg_ywgz_p007", "syg_ywgz_p008", "syg_ywgz_p009", "syg_ywgz_p011", "syg_ywgz_p012", "syg_ywgz_p013", "syg_ywgz_p014", "syg_ywgz_p015", "syg_ywgz_p016", "syg_ywgz_p017", "syg_ywgz_p018", "syg_ywgz_p019", "syg_ywgz_p020", "syg_ywgz_p021", "syg_ywgz_p022"];
+    var ImgArray = [];
+    var guide;
+    var proess;
+    var pss;
+    var psslength = 0;
+    var pssMax = 50;
+    var t = 0, stops2 = null, auto =1; var t2 = 0;
+    var guidexe = 0,guideze = 0,cameraxe = 0,cameraze = 0;
+    var loader = new THREE.JSONLoader();
+    var temp = 0;
+    var theCanvas;
+    var group1 =0;    //摄影厅第一部分index
+    var group2 = 24;    //摄影厅第二部分24
+    var group3 = 47;    //摄影厅第三部分47
+    var group4 = 66;    //摄影厅第四部分66
+    var group5 = 89;    //摄影厅第五部分w
+    var group6 = 113;    //摄影厅第六部分
+
+
+    //根据objArray 找到图片地址数组
+    function render() {
+
+        t++;
+        stops2 = requestAnimationFrame(render);
+    //    var delta = clock.getDelta();
+    //   controls.update(delta);
+
+        t == 1 && init_qt();
+    
+        t == 10 && init_zp_wmfw(); 
+        t == 20 && init_zp_ywgz(); 
+        t == 30 && init_zp_ldgh(); 
+        t == 50 && init_zp_dwjs();
+        t == 60 && init_zp_qxjy();
+        t == 110 && init_zp_rwfg();
+        //collision1(x, -x, z, -z);
+        collision1(110, -97, 110, -159);
+        //领导关怀
+        //  collision(0, -50, 109, 79);
+
+        collision(0, -32, 109, 79);
+        collision(-28, -48, 109, 86);
+
+        collision(-35, -82, 72, 54);
+        collision(-65, -83, 103, 61);
+        collision(-13, -100, 40, 15);
+        //业务工作
+        collision(-64, -79, 9, -27);
+        collision(-26, -79, -12, -27);
+        collision(-43, -57, -12, -45);
+        collision(-28, -41, -49, -76);
+        collision(-10, -103, -63, -78);
+        //为民服务
+        collision(-26, -86, -87, -107);
+        collision(-66, -86, -87, -140);
+        collision(-31, -80, -129, -144);
+       // collision(-1.5, -103, -149, -166);
+        //队伍建设
+        collision(96, 39, 62, 42);
+        collision(96, 76, 85, 62);
+        collision(96, 39, 97, 77);
+       // collision(106, 11, 119, 99);
+        //抢险救援
+        collision(61, 28, -12, -30);
+        collision(99, 66, -12, -30);
+        collision(114, 14, 31, 16);
+        //人文风光
+        collision(100, 15, -60, -80);
+        collision(92, 77, -103, -140);
+        collision(92, 48, -103, -113);
+
+        collision(106, 93, -87, -132);
+        collision(108, 73, -65, -90);
+
+        // collision(58, 11, -126, -160);
+        collision(42, 11, -126, -160);
+        collision(58, 38, -130, -160);
+//        console.log("camera x z:" + camera.position.x + "," + camera.position.z);
+//        console.log("guide x z:" + guide.position.x + "," + guide.position.z);
+        if (auto &&t > 480) {
+            t2 += 1;
+            camera.lookAt(guide.position);
+            controls.freeze = !0;        
+            roaming1(2, 6, 1, 1420);//guide
+            roaming2(2, 6, 1, 1420);
+            roaming1(4, 6, 1660, 2900);
+            roaming2(4, 6, 1660, 2900);
+            2900 < t2 && (autsw(),
+            t2=0,
+            guide.position.set(0,7.5, -145),
+            camera.position.set(0, 7.5, -151),
+            camera.lookAt(guide.position),
+            guidexe = 0,
+            guideze = -145,
+            cameraxe = 0,
+            cameraze = -151
+            )
+          
+            if(t2>1420 && t2<1700){
+            var x = guide.position.x;
+            var z = guide.position.z;
+            var time = clock.getElapsedTime() * 1;
+            guide.position.x = Math.sin(t2 * Math.PI / 180) * 10 + x;
+            guide.position.z = Math.cos(t2 * Math.PI / 180) * 10 + z;
+            }
+          
+        }
+        else {
+            setTimeout("controls.freeze \x3d false;", 100);
+           var c = clock.getDelta();
+            controls.update(c);
+      
+        }
+        camera.position.y = 7.5//25; 
+        renderer.clear();
+        groundMirror.render();
+        renderer.render(scene, camera);
+        cameraCube.rotation.copy(camera.rotation);
+      //  pross();
+        setTimeout(function () { if (psslength >= 100 && t>500) { proess.style.display = "none"; } }, 3000);
+    }
+    function uppross(jindu) {
+        psslength = psslength + jindu;
+        var ms = 100;
+        if (psslength <= ms) {
+            pss.innerHTML = psslength + '%&nbsp;&nbsp;';
+            pss.style.width = psslength + '%';
+        }
+        else {
+            pss.innerHTML = '100%&nbsp;&nbsp;';
+            pss.style.width = '100%';
+        }
+    }
+    function roaming1(c, a, b, d) {
+        t2 < 1420 && (guide.position.x = -5);
+     
+        1 === c & t2 > b & t2 <= d && (guide.position.x = (t2 - b) / (a) + guidexe, t2 === d && (guidexe = guide.position.x));
+        2 === c & t2 > b & t2 <= d && (guide.position.z = (t2 - b) / (a) + guideze, t2 === d && (guideze = guide.position.z));
+        3 == c & t2 > b & t2 <= d && (guide.position.x = -(t2 - b) / a + guidexe, t2 == d && (guidexe = guide.position.x));
+        4 == c & t2 > b & t2 <= d && (guide.position.z = -(t2 - b) / a + guideze-280, t2 == d && (guideze = guide.position.z));
+     
+    }
+    function roaming2(c, a, b, d) {
+        1 === c & t2 > b & t2 <= d && (camera.position.x = (t2 - b) / a + cameraxe, t2 === d && (cameraxe = camera.position.x));
+        2 === c & t2 > b & t2 <= d && (camera.position.z = (t2 - b) / a + cameraze, t2 === d && (cameraze = camera.position.z));
+        3 === c & t2 > b & t2 <= d && (camera.position.x = -(t2 - b) / a + cameraxe, t2 === d && (cameraxe = camera.position.x));
+        4 === c & t2 > b & t2 <= d && (camera.position.z = -(t2 - b) / a + cameraze, t2 === d && (cameraze = camera.position.z))
+      
+    }
+    function pross() {
+        psslength = psslength + 0.5;
+        var ms = 100;
+        if (psslength < ms) {
+            pss.innerHTML = psslength + '%&nbsp;&nbsp;';
+            pss.style.width = psslength + '%';      
+        }
+    }
+    function init() {
+
+        //加入指定图片
+        loadXML("../PathData.xml", 1);
+//        console.log("aa", imgArr);
+
+//        CreateTex(imgArr[0]);
+
+        proess = document.getElementById("proess");
+        proess.style.width = window.innerWidth - 30;
+        proess.style.height = window.innerHeight - 30;
+        pss = document.getElementById("proessP");
+        pss.style.top = (window.innerHeight - 110) + 'px';
+
+         theCanvas = document.getElementById("cnvs");
+        theCanvas.width = window.innerWidth ;
+        theCanvas.height = window.innerHeight;
+        if (!theCanvas || !theCanvas.getContext) {
+            return;
+        }
+        if (window.WebGLRenderingContext) {
+            renderer = new THREE.WebGLRenderer({
+                canvas: theCanvas,
+                antialias: true
+            });
+        }
+        if (!renderer) {
+            renderer = new THREE.CanvasRenderer({ canvas: theCanvas });
+            renderer.setSize(theCanvas.width, theCanvas.height);
+        }
+
+        sceneCube = new THREE.Scene;
+        cameraCube = new THREE.PerspectiveCamera(70, theCanvas.width / theCanvas.height, 1, 5E4);
+        sceneCube.add(cameraCube);
+
+        scene = new THREE.Scene();
+
+      
+        camera = new THREE.PerspectiveCamera(50, theCanvas.width / theCanvas.height, 0.1, 1000000);
+        //camera.position.x = 7;
+        //camera.position.y = 7.5;
+        //camera.position.z = 115;
+        camera.position.x = 0;
+        camera.position.y = 7.5;
+        camera.position.z = -151;
+        //自动行走
+        guide = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial({ color: 65280 }));
+        //guide.position.x = 0;
+        //guide.position.y = 7.5;
+        //guide.position.z = 110;
+        guide.position.x = 0;
+        guide.position.y = 7.5;
+        guide.position.z = -145;
+        guide.visible = !1;
+        scene.add(guide);
+
+
+      //  camera.lookAt(guide.position);
+        guidexe = guide.position.x,
+        guideze = guide.position.z,
+        cameraxe = camera.position.x,
+        cameraze = camera.position.z;
+        camera.lookAt(guide.position);
+
+       var hemiLight = new THREE.HemisphereLight(16777215, 16777215, 1);
+       hemiLight.position.set(0, 100, 0);
+       scene.add(hemiLight);
+
+        controls = new THREE.FirstPersonControls(camera);
+        controls.movementSpeed = 15;
+        controls.lookSpeed = .1;
+        controls.initialX = 1.5;
+        controls.initialY = 0;
+        controls.rotateDatX = 0;
+        controls.rotateDatY = 0;
+        clock = new THREE.Clock;
+
+        var loader = new THREE.JSONLoader();
+
+        var planeGeo = new THREE.PlaneBufferGeometry(100.1, 100.1);
+        groundMirror = new THREE.Mirror(renderer, camera, { clipBias: 0.003, textureWidth: WIDTH, textureHeight: HEIGHT, color: 0x777777 });
+
+        var mirrorMesh = new THREE.Mesh(planeGeo, groundMirror.material);
+        mirrorMesh.add(groundMirror);
+        mirrorMesh.rotateX(-Math.PI / 2);
+        mirrorMesh.scale.set(15, 15, 15);
+        mirrorMesh.position.set(5.5, -2, 0);
+        scene.add(mirrorMesh);
+        uppross(1);
+        render();
+        window.addEventListener("resize", onWindowResize, false);
+        document.addEventListener("mousemove", onDocumentMouseMove, false);
+        document.addEventListener("mousedown", onDocumentMouseDown, false);
+        document.addEventListener("mouseup", onDocumentMouseUp, false);
+       
+    }
+    function init_qt() {
+        var loader = new THREE.JSONLoader();
+
+        loader.load("zoulang/1.js", function (geometry, materials) {
+            materials[0].transparent = true;
+            materials[0].opacity = .1;
+            materials[6].transparent = true;
+            materials[6].opacity = .9;
+
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            uppross(1);
+        });
+        loader.load("zoulang/2.js", function (geometry, materials) {
+            materials[0].transparent = true;
+            materials[0].opacity = .9;
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+        });
+        loader.load("zoulang/3.js", function (geometry, materials) {
+            materials[0].transparent = true;
+            materials[0].opacity = .9;
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            uppross(1);
+        });
+        loader.load("zp/hua.js", function (geometry, materials) {
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            uppross(1);
+        });
+    }
+    function init_zp_dwjs() {
+
+
+        var len = objArray2.length;
+
+        loader.load("dwjs/dwjs01.js", function (geometry, materials) {
+            materials[3].transparent = true;
+            materials[3].opacity = .9;
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            uppross(1);
+        });
+        for (var i = 0 ; i < len; i++) {
+            (function(i) {
+                loader.load("zp/dwjs/" + objArray2[i] + ".js", function (geometry, materials) {
+                var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                object.scale.set(scale, scale, scale);
+                object.position.set(0, 0, 0);
+                object.rotation.set(0, 0, 0);
+                object.receiveShadow = true;
+                scene.add(object);
+                object.material.materials[0].map = tex_arr[i];
+                console.log("!",object);
+                uppross(1);
+            });
+        })(i);
+        }
+
+        loader.load("zp/dwjs/syg_dwjs_tubiao.js", function (geometry, materials) {
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            HotSpots.push(object);
+
+        });
+       
+    }
+    function init_zp_ldgh() {
+
+        var len = objArray1.length;
+        loader.load("ldgh/ldgh.js", function (geometry, materials) {
+            materials[0].transparent = true;
+            materials[0].opacity = .9;
+
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+        });
+        for (var i = 0; i < len; i++) {
+            (function(i) {
+                loader.load("zp/ldgh/" + objArray1[i] + ".js", function (geometry, materials) {
+                    var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                    object.scale.set(scale, scale, scale);
+                    object.position.set(0, 0, 0);
+                    object.rotation.set(0, 0, 0);
+                    object.receiveShadow = true;
+                    scene.add(object);
+                    object.material.materials[0].map = tex_arr[i+group2];
+                    uppross(1);
+                });
+            })(i);
+        }
+        loader.load("zp/ldgh/syg_ldgh_tubiao.js", function (geometry, materials) {
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            HotSpots.push(object);
+
+        });
+    }
+    function init_zp_qxjy() {
+
+
+        var len = objArray3.length;
+        loader.load("qxjy/qxjy.js", function (geometry, materials) {
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            materials[2].transparent = true;
+            materials[2].opacity = .9;
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+        });
+        for (var i = 0; i < len; i++){
+            (function(i) {
+                loader.load("zp/qxjy/" + objArray3[i] + ".js", function (geometry, materials) {
+                    var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                    object.scale.set(scale, scale, scale);
+                    object.position.set(0, 0, 0);
+                    object.rotation.set(0, 0, 0);
+                    object.receiveShadow = true;
+                    scene.add(object);
+                    object.material.materials[0].map = tex_arr[i + group3];
+                    uppross(1);
+                });
+            })(i);
+        }
+
+        loader.load("zp/qxjy/syg_qxjy_tubiao.js", function (geometry, materials) {
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            HotSpots.push(object);
+           
+        });
+    }
+    function init_zp_rwfg() {
+        var len = objArray4.length;
+        loader.load("rwfg/rwfg.js", function (geometry, materials) {
+            materials[1].transparent = true;
+            materials[1].opacity = .9;
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            uppross(1);
+        });
+        for (var i = 0; i < len; i++){
+            (function(i) {
+                loader.load("zp/rwfg/" + objArray4[i] + ".js", function (geometry, materials) {
+                    var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                    object.scale.set(scale, scale, scale);
+                    object.position.set(0, 0, 0);
+                    object.rotation.set(0, 0, 0);
+                    object.receiveShadow = true;
+                    scene.add(object);
+                    object.material.materials[0].map = tex_arr[i + group4];
+                    uppross(1);
+                });
+            })(i);
+        }
+
+        loader.load("zp/rwfg/syg_rwfg_tubiao.js", function (geometry, materials) {
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            HotSpots.push(object);
+           
+        });
+    }
+    function init_zp_wmfw() {
+
+        var len = objArray5.length;
+        loader.load("wmfw/wmfw01.js", function (geometry, materials) {
+            materials[3].transparent = true;
+            materials[3].opacity = .9;
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+        });
+        for (var i = 0; i < len; i++){
+            (function(i) {
+                loader.load("zp/wmfw/" + objArray5[i] + ".js", function (geometry, materials) {
+                        var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                        object.scale.set(scale, scale, scale);
+                        object.position.set(0, 0, 0);
+                        object.rotation.set(0, 0, 0);
+                        object.receiveShadow = true;
+                        scene.add(object);
+                        uppross(1);
+                        object.material.materials[0].map = tex_arr[i + group5];
+                    });
+            })(i);
+        }
+
+        loader.load("zp/wmfw/syg_wmfw_tubiao.js", function (geometry, materials) {
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            HotSpots.push(object);
+           
+        });
+    }
+    function init_zp_ywgz() {
+
+
+        var len = objArray6.length;
+        loader.load("ywgz/ywgz.js", function (geometry, materials) {
+            materials[2].transparent = true;
+            materials[2].opacity = .9;
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+
+        });
+        for (var i = 0; i < len; i++){
+            (function(i) {
+                loader.load("zp/ywgz/" + objArray6[i] + ".js", function (geometry, materials) {
+                    var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+                    object.scale.set(scale, scale, scale);
+                    object.position.set(0, 0, 0);
+                    object.rotation.set(0, 0, 0);
+                    object.receiveShadow = true;
+                    scene.add(object);
+                    uppross(1);
+                    object.material.materials[0].map = tex_arr[i + group6];
+                });
+            })(i);
+        }
+
+
+        loader.load("zp/ywgz/syg_ywgz_tubiao.js", function (geometry, materials) {
+            var object = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+            object.scale.set(scale, scale, scale);
+            object.position.set(0, 0, 0);
+            object.rotation.set(0, 0, 0);
+            object.receiveShadow = true;
+            scene.add(object);
+            HotSpots.push(object);
+            uppross(6);
+        });
+    }
+    function collision(posX, negX, posZ, negZ) {
+
+        if (camera.position.x < posX & camera.position.x > negX & camera.position.z > negZ & camera.position.z < posZ) {
+            if (camera.position.x - posX > -3.8) camera.position.x = posX;
+            else if (camera.position.x - negX < 3.8) camera.position.x = negX;
+            else if (camera.position.z - negZ < 3.8) camera.position.z = negZ;
+            else if (camera.position.z - posZ > -3.8) camera.position.z = posZ
+        }
+    }
+    function collision1(posX, negX, posZ, negZ) {
+     //   console.log("camera.position.x-" + camera.position.x + ";camera.position.z-" + camera.position.z);
+        if (posX - camera.position.x < 3.8) {
+            camera.position.x = posX - 4;
+        }
+        if (camera.position.x - negX < 3.8)
+            camera.position.x = negX + 4;
+        if (posZ - camera.position.z < 4.8)
+            camera.position.z = posZ - 5;
+        if (camera.position.z - negZ < 4.8)
+            camera.position.z = negZ + 5;
+    }
+    function onDocumentMouseMove(event) {
+        event.preventDefault();
+        mouse.x = event.clientX / renderer.domElement.width * 2 - 1;
+        mouse.y = -(event.clientY / renderer.domElement.height) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        var k = raycaster.intersectObjects(HotSpots);
+        if (0 < k.length) {
+
+            for (var a = 0; a < HotSpots.length; a++) {
+                if (k[0].object == HotSpots[a]) {
+                    document.body.style.cursor = "pointer";
+                }
+            }
+        }
+        else {
+            document.body.style.cursor = "auto";
+
+        }
+    }
+    function onWindowResize(event) {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+    }
+
+    function onDocumentMouseDown(event) {
+        focus();
+
+        bs = 1;
+        controls.lookSpeed = .1;
+        camera.lookAt(guide.position);
+        event.preventDefault();
+        mouse.x = event.clientX / renderer.domElement.width * 2 - 1;
+        mouse.y = -(event.clientY / renderer.domElement.height) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        var k = raycaster.intersectObjects(HotSpots);
+        if (0 < k.length) {
+            var l = HotSpots.length
+            for (var a = 0; a < l; a++) {
+                if (k[0].object == HotSpots[a]) {
+                    document.body.style.cursor = "pointer";
+                 //   framediv(a);
+                }
+            }
+            controls.lookSpeed = 1E-5;
+        }
+    }
+    
+  
+    function onDocumentMouseUp(event) { }
+    function framediv(a) {
+        //a是坐标 找到对应的馆
+        document.getElementById("box").style.display = "block";
+        document.getElementById("frame").src = "imglist.html?k=" + a;
+    }
+    function closebox() {
+        document.getElementById("frame").src = "";
+        document.getElementById("box").style.display = "none";
+    }
+   
+    var camX = 0,
+        camY = 7.5, 
+        camZ = -151;
+
+    function saver() {
+        camX = camera.position.x;
+        camY = camera.position.y;
+        camZ = camera.position.z
+    }
+    function loadr() {
+        camera.position.x = camX;
+        camera.position.y = camY;
+        camera.position.z = camZ
+    }
+    var bs = 1;
+    function autsw() {
+        if (auto) {//停止走动
+            controls = new THREE.FirstPersonControls(camera);
+            controls.movementSpeed = 15;
+            controls.lookSpeed = .1;
+            controls.initialX = 1.5;
+            controls.initialY = 0;
+            controls.rotateDatX = 0;
+            controls.rotateDatY = 0;
+            camera.position.set(0, 7.5, -151);
+            guide.position.set(0, 7.5, -145);
+            auto = false;
+            document.getElementById('autosw').innerHTML = '<a href="javascript:autsw();"><img src="image/man-tin.png" width="50px" height="50px"></a>';
+          //  saver();
+         //   bs = 0;
+            controls.freeze = 0;
+        } else {
+            auto = true;
+            t2 = 0;
+            camera.position.set(0, 7.5, -151);
+            guide.position.set(0, 7.5, -145);
+            guidexe = guide.position.x,
+      guideze = guide.position.z,
+      cameraxe = camera.position.x,
+      cameraze = camera.position.z;
+            document.getElementById('autosw').innerHTML = '<a href="javascript:autsw();"><img src="image/man-zou.png" width="50px" height="50px"></a>';
+         //   loadr();
+          //  controls.freeze = !0;
+           // bs = 1;
+        }
+    }
+
+
+
+</script>
+</head>
+<body onload="init()" bgcolor="#CCC">
+<div id="autosw" style="position:absolute; left:90%; bottom:20px">
+    <a href="javascript:autsw();">
+        <img src="image/man-zou.png" width="50px" height="50px"/>
+    </a>
+</div>
+
+<div style="float:left">
+   <canvas  id="cnvs" style="background-color:black"></canvas>
+</div>
+    <div id="proess" style="background:url(image/bg.jpg);background-size:100%;display:block; position:absolute;width:100%;height:100%; opacity:1">
+    <div id="proessP" style="background-color:red;height:14px;font-size:12px;text-align:right;position:relative;color:white;width:0;"></div>
+</div>
+<!--信息弹窗-->
+<div id="box" style="display:none; z-index:99">
+  <div class="box"><iframe id="frame" src="" width="94%" height="700px" style="padding:10px;margin-left:3%;margin-right:3%" frameborder="0" scrolling="no"></iframe></div>
+  <div id="Close"><a href="javascript:closebox();"><img src="image/delete.ico" /></a></div>
+</div>
+
+</body>
+</html>
